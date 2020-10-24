@@ -11,4 +11,7 @@ node {
                Thanks 
                SeshidharDevops ''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'seshidharka@gmail.com'
 	}
+	stage ('Slcak Notfication'){
+		slackSend channel: 'jenkinspipeline', color: 'Green', message: 'jenkinspipeline', tokenCredentialId: 'slack-demo-testing', username: 'mychurchtalk'
+	}
 }
