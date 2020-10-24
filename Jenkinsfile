@@ -12,6 +12,12 @@ node {
                SeshidharDevops ''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'seshidharka@gmail.com'
 	}
 	stage ('Slcak Notfication'){
-		slackSend channel: 'jenkinspipeline', color: 'Green', message: 'jenkinspipeline', tokenCredentialId: 'slack-demo-testing', username: 'mychurchtalk'
+		
+		slackSend baseUrl: 'https://hooks.slack.com/services/', 
+			  channel: 'jenkinspipeline', 
+			  color: 'Green', 
+			  message: 'Welcome to Jenkins, Slack!',
+			  teamDomain: 'mychurchtalk'
+			  tokenCredentialId: 'slack-demo'
 	}
 }
